@@ -1,0 +1,30 @@
+/**
+ * デザインを定義したCSSファイル
+ */
+.redScore{
+    color:red;
+    font-weight:bold;
+}
+
+.right {
+    text-align:right;
+}
+
+.center {
+    text-align:center;
+}
+
+table, td, th {
+    border: 1px #000000 solid;
+    border-collapse:collapse;
+}
+
+th {
+    background-color: #ABD8A2;
+}
+
+td, th{
+    padding-left:0.5em;
+    padding-right:0.5em;
+}
+
