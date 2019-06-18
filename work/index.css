@@ -1,0 +1,17 @@
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+  animation: text-in .8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 0s backwards;
+}
+.list-enter-active, .list-leave-active, .list-move {
+  transition: all 1s;
+}
+.list-enter, .list-leave-to /* .list-leave-active for below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateZ(1px);
+}
+@keyframes text-in {
+  0% {
+    transform: translateZ(1px);
+    opacity: 0;
+  }

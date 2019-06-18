@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang=Ja>
+  <head>
+    <meta  charset="UTF-8">
+    <script type="text/javascript" src="index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body>
+    <div id="list-demo">
+      <button v-on:click="getComment">split</button>
+      <button v-on:click="next">next</button>
+      <transition-group name="list" tag="p" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
+        <span v-for="item in splitChar" v-bind:key="item.id" class="list-item" :style="{animationDelay: item.id*100+'ms'}">
+          {{ item.char }}
+        </span>
+      </transition-group>
+    </div>
+  </body>
+</html>
